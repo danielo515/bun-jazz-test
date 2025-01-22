@@ -1,0 +1,25 @@
+{
+  "name": "test-bun",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "start": "bun index.ts",
+    "check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "bun-types": "latest",
+    "dprint": "^0.48.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "@effect/platform": "^0.72.0",
+    "@effect/platform-bun": "^0.52.2",
+    "dotenv": "^16.4.7",
+    "drizzle-orm": "0.38.2",
+    "effect": "^3.12.0",
+    "fp-ts": "^2.16.1",
+    "jazz-nodejs": "^0.9.12",
+    "jazz-tools": "^0.9.12"
+  }
+}
