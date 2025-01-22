@@ -9,21 +9,6 @@ type ShoppingListItem = {
   readonly emoji: string | null;
 }
 
-export class JazzConfig extends Context.Tag('JazzConfig')<
-  JazzConfig,
-  { account: string; password: Redacted.Redacted<string>; }
->() {
-  static Live = Layer.effect(
-    this,
-    Config
-      .all({
-        account: Config.string('JAZZ_ACCOUNT'),
-        password: Config.redacted('JAZZ_PASSWORD'),
-        emailKey: Config.redacted('JAZZ_EMAIL_KEY'),
-      }),
-  );
-}
-
 export class JazzInitializationError
   extends Data.TaggedError('@app/JazzInitializationError')<{ cause: unknown; }> { }
 
